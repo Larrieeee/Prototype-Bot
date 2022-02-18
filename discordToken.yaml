@@ -1,19 +1,3 @@
-name: Secrets example
-on: push
-jobs:
-  job1:
-    runs-on: windows-latest
-    steps:
-      - name: Test
-        run: |
-          if [ "$CANDY_SECURE" == "candy" ]
-          then
-            echo "Got secret"
-          fi
-          if [ "$PEAR_SECURE" == "pear" ]
-          then
-            echo "Got secret something else"
-          fi
-        env: 
-          CANDY_SECURE: ${{ secrets.CANY_APPLE_SECURE }}
-          PEAR_SECURE: ${{ secrets.PEAR_MAGIC_SECURE }}
+
+env: 
+  TOKEN: ${{ secrets.TOKEN }}
