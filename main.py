@@ -1,7 +1,9 @@
 # VARIABLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 import discord
-from secret import TOKEN
+import os
+
+from os import TOKEN
 
 iForgotToken = TOKEN
 
