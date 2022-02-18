@@ -16,6 +16,6 @@ iForgot Bot is powered by the discord.py library and contains basic commands for
 
 *Produced By: Tyrone#1455*
 
-https://discord.com/api/oauth2/authorize?client_id=886114841968914445&permissions=494656&scope=bot
+https://discord.com/api/oauth2/authorize?client_id=944062622758752287&permissions=139590078016&scope=bot
 
 Review how to create a working Discord.py bot
