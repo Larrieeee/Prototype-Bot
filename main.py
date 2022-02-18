@@ -1,21 +1,16 @@
 # VARIABLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-'''
+
 import discord
 import os
 
-os._Environ
-iForgotToken = TOKEN
+iForgotBot = discord.Client()
 
 # FUNCTIONS ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-print(iForgotToken)
-'''
+@iForgotBot.event
+async def on_ready():
+    print("Working")
+
 # MAINSETUP ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-import yaml     # import pyyaml package
-
-# open the yaml file and load it into data
-
-with open('discordToken.yaml') as f:
-    data = yaml.load(f, Loader=yaml.FullLoader)
-    print(data)
+iForgotBot.run(os.getenv('Token'))
