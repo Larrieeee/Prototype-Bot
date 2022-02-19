@@ -1,8 +1,0 @@
-import pywhatkit as kit
-
-integer = "+7142611150"
-hour = 13
-minute = 31
-
-
-kit.sendwhatmsg(integer, "Hello :)", hour, minute)
