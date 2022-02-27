@@ -2,7 +2,7 @@
 
 **Context (Why Does This Exist):**
 
-iForgot Bot is powered by the discord.py.EXT library and contains basic commands for those who have forgotten how to use python (because the half life of you remembering how to code is one week).
+iForgot Bot is powered by the nextcord library and contains basic commands for those who have forgotten how to use python (because the half life of you remembering how to code is one week).
 
 **Bot Mechanics:**
 
