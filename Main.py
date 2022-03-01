@@ -1,5 +1,6 @@
 # Variables --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+from tokenize import Name
 import nextcord
 from nextcord.ext import commands 
 
@@ -20,6 +21,31 @@ from pprint import pprint
 async def on_ready():
     await bot.change_presence(activity = nextcord.activity.Game("Nextcord"))
     print(f"{bot.user} is working as it should..")
+
+@bot.event
+async def on_message(message):
+
+    if message.author == bot.user:
+        return
+
+    try:
+        await message.add_reaction(reactionEmoji)
+    except NameError:
+        print("No emoji set")
+
+    await bot.process_commands(message)
+
+
+@bot.command(name = "setemoji".lower())
+async def change_reaction(context, emoji):
+    
+    try:
+        global reactionEmoji
+        reactionEmoji = emoji
+        await context.message.add_reaction(emoji)
+    
+    except nextcord.HTTPException:
+        await context.reply("Not an emoji?")
 
 # Primitive weather detection command
 @bot.command()
