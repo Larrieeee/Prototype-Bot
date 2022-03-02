@@ -2,6 +2,7 @@
 
 from tokenize import Name
 import nextcord
+from nextcord import Interaction
 from nextcord.ext import commands 
 
 from dotenv import load_dotenv
@@ -35,6 +36,9 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+@bot.slash_command(guild_ids=[586680405302968321])
+async def ding(interaction: Interaction):
+    await interaction.response.send_message("Pong!")
 
 @bot.command(name = "setemoji".lower())
 async def change_reaction(context, emoji):
