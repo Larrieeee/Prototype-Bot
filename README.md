@@ -2,7 +2,7 @@
 
 **Context (Why Does This Exist):**
 
-_____
+Uh, quite simply, it's a prototype bot
 
 **Bot Mechanics:**
 
