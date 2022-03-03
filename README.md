@@ -2,12 +2,12 @@
 
 **Context (Why Does This Exist):**
 
-Uh, quite simply, it's a prototype bot. It has many prefixes, like 200 LOL. See prefix.py in the code-here branch for details
+Uh, quite simply, it's a prototype bot. It has many prefixes, like 200. See prefix.py in the code-here branch for details 😎
 
 **Bot Mechanics:**
 
 - What's Good: Responses with a "YOOOOO WHATS GOOD {your name}"
--
+- More coming shortly (ie. slash commands, private messages)
 
 *Produced By: Tyrone#1455*
 
