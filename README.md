@@ -11,4 +11,4 @@ Uh, quite simply, it's a prototype bot. It has many prefixes, like 200. See pref
 
 *Produced By: Tyrone#1455*
 
-https://discord.com/api/oauth2/authorize?client_id=944062622758752287&permissions=139590078016&scope=bot
+https://discord.com/api/oauth2/authorize?client_id=948407570836647956&permissions=139590078016&scope=bot
