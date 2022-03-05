@@ -12,7 +12,7 @@ discordToken = os.getenv("Token")
 from prefix import yooPrefix
 bot = commands.Bot(command_prefix = yooPrefix())
 
-import asyncio
+import asyncio, datetime
 
 # Functions --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -32,6 +32,19 @@ async def summon_user(context, username, amount = 5):
   for i in range(0, int(amount)):
     await context.send(f"Mr. Pham's slaves is summoning {username}. Requested {i + 1} times")
     await asyncio.sleep(1)
+
+@bot.command(name = "wait")
+async def interval_message(context, waitSeconds, *messageToSend,):
+
+    now = datetime.datetime.now()
+    waitAmount = now + datetime.timedelta(seconds = float(waitSeconds))
+
+    wait_time = (waitAmount - now).total_seconds()
+
+    # Waits the amount of time inputted by the user    
+    await asyncio.sleep(wait_time)
+    await context.send(" ".join(messageToSend))
+
 
 # Slash Commands --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
