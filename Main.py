@@ -12,6 +12,8 @@ discordToken = os.getenv("Token")
 from prefix import yooPrefix
 bot = commands.Bot(command_prefix = yooPrefix())
 
+import asyncio
+
 # Functions --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 @bot.event
@@ -23,6 +25,13 @@ async def on_ready():
 async def whats_good(context, *good):
     await context.reply(f"YOOOOOOOOOOO WHATS GOOD <@{context.author.id}>")
     await context.message.add_reaction("<:hehehehaw:945416057626165308>")
+
+@bot.command(name = "summon")
+async def summon_user(context, username, amount = 5):
+
+  for i in range(0, int(amount)):
+    await context.send(f"Mr. Pham's slaves is summoning {username}. Requested {i + 1} times")
+    await asyncio.sleep(1)
 
 # Slash Commands --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
