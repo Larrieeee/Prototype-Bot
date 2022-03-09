@@ -1,4 +1,3 @@
 git+https://github.com/nextcord/nextcord
-dotenv
 asyncio
 datetime
