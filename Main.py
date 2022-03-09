@@ -7,7 +7,7 @@ from nextcord.ext import commands
 from dotenv import load_dotenv
 import os
 load_dotenv()
-from disToken import token
+discordToken = os.getenv("TOKEN")
 
 from prefix import yooPrefix
 bot = commands.Bot(command_prefix = yooPrefix())
