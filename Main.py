@@ -7,7 +7,7 @@ from nextcord.ext import commands
 from dotenv import load_dotenv
 import os
 load_dotenv()
-discordToken = os.getenv("Token")
+from disToken import token
 
 from prefix import yooPrefix
 bot = commands.Bot(command_prefix = yooPrefix())
@@ -73,5 +73,5 @@ async def talk_trash(interaction):
 
 # MainSetup --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-bot.run(discordToken)
+bot.run(token)
 # Note that the bot runs under the invite "applications.command"
