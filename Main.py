@@ -41,10 +41,19 @@ async def interval_message(context, waitSeconds, *messageToSend,):
 
     wait_time = (waitAmount - now).total_seconds()
 
-    # Waits the amount of time inputted by the user    
+    # Waits the amount of time inputted by the user 
     await asyncio.sleep(wait_time)
     await context.send(" ".join(messageToSend))
 
+    print(f"{context.author} used the wait command LMAO")
+
+@bot.command(name = "hi")
+async def hello_peter(context, user):
+    if user.startswith("<@"):
+        await context.send(f"hi {user}")
+
+    else:
+        return await context.send("Who is that?")
 
 # Slash Commands --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,6 +61,15 @@ async def interval_message(context, waitSeconds, *messageToSend,):
 async def target_ping(interaction: Interaction, message:str):
 
     await interaction.response.send_message(f"{message}")
+
+@bot.slash_command(name = "ball", description = "sack?", guild_ids = [586680405302968321])
+async def ping_pong(interaction):
+
+    await interaction.response.send_message("Sack")
+
+@bot.slash_command(name = "larry", description = "who??", guild_ids = [586680405302968321])
+async def talk_trash(interaction):
+    await interaction.response.send_message("<:hehehehaw:945416057626165308>")
 
 # MainSetup --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
