@@ -1,0 +1,5 @@
+git+https://github.com/nextcord/nextcord
+dotenv
+os
+asyncio
+datetime
