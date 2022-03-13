@@ -1,7 +1,7 @@
 # Variables --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 import nextcord
-from nextcord import Interaction
+from nextcord import Activity, Interaction
 from nextcord.ext import commands
 
 from dotenv import load_dotenv
@@ -13,11 +13,17 @@ from prefix import yooPrefix
 bot = commands.Bot(command_prefix = yooPrefix())
 
 import asyncio, datetime
+from test import time_elasped
 
 # Functions --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 @bot.event
 async def on_ready():
+    
+    currentDate = datetime.datetime.now()
+    formatDate = currentDate.strftime("%x")
+
+    await bot.change_presence(activity = nextcord.Game(f"Up Since {formatDate}"))
     print(bot.user)
 
 # Pass an indefinite number of arguments. Command responds with "YOO WHATS GOOD" when the user inputs yoo what's
