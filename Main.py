@@ -34,6 +34,9 @@ async def on_ready():
 async def ping_pong(interaction: Interaction):
     await interaction.response.send_message("Pong!")
 
+# Remove the default 'help' command 
+bot.remove_command("help")
+
 @bot.command(name = "help")
 async def help_command(context, *arg):
     userName = context.author
