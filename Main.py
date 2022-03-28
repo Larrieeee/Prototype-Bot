@@ -32,8 +32,13 @@ async def on_ready():
 
 @bot.slash_command(name = "ping", description = "ping pong?", guild_ids = [949110139531722802])
 async def ping_pong(interaction: Interaction):
-
     await interaction.response.send_message("Pong!")
+
+@bot.command(name = "help")
+async def help_command(context, *arg):
+    userName = context.author
+
+    await userName.send("Hello")
 
 # MainSetup --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
